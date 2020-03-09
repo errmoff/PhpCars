@@ -72,9 +72,13 @@ $path = explode('/', $host)[$num];
                         <!-- User -->
                         <?php
                         if (isset($_SESSION['UserName'])) {
-                            echo ' <li style="margin-left:4vw"><a class="navBuutons" href="logout">Log out</a></li>';
-                            echo ' <li style="color:#B18322;"><a class="navBuutons" href="profile">My profile</a></li>';
-                            echo '	<b class="navYouLogAs">You are logged in as: ' . $_SESSION["UserName"] . '</b> ';
+                            echo '<div class = "menu_nav1">';
+                            echo '<ul class="d-flex flex-row align-items-start justify-content-start">';
+                            echo ' <li><a style="margin-left: 40px" href="logout">Log out</a></li>';
+                            echo ' <li><a style="margin-left: 40px"href="profile">My profile</a></li>';
+                            echo ' <li><a style="margin-left: 40px" >You are logged in as: ' . $_SESSION["UserName"] . '</a></li>';
+                            echo '</ul>';
+                            echo '</div>';
                             // echo '<img width="50px" height="50px" src="images\'.$_SESSION["PrivilegesId"]." alt="'.$_SESSION["UserName"].'">';
                         } else {
                             ?>
@@ -99,6 +103,9 @@ $path = explode('/', $host)[$num];
 <?php
 if(isset($content)) echo $content;
 ?>
+    
+    
+    
 
 </div> <!-- End content -->
 
